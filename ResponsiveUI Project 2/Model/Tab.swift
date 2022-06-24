@@ -20,6 +20,7 @@ enum Tab: String, CaseIterable {
 }
 
 /*
+ 
  ScrollView(count == 1 ? .horizontal : .vertical, showsIndicators: false) {
      DynamicLazyGrid(count: count) {
          ForEach(sampleStorage) { storage in
