@@ -17,9 +17,9 @@ struct MainView: View {
                 if prop.isiPad && !prop.isSplit {
                     SideBar(prop: prop, currentTab: $currentTab)
                 }
-
+                
                 Dashboard(prop: prop, showSideBar: $showSideBar)
-
+                
             }
             .overlay {
                 ZStack(alignment: .leading) {
@@ -31,7 +31,7 @@ struct MainView: View {
                                 showSideBar = false
                             }
                         }
-
+                    
                     if showSideBar {
                         SideBar(prop: prop, currentTab: $currentTab)
                             .transition(.move(edge: .leading))
@@ -40,8 +40,8 @@ struct MainView: View {
             }
         }
     }
-    
 }
+
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
